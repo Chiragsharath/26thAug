@@ -1,0 +1,94 @@
+<style>
+  .headingCart{
+      background: #555;
+      color: #fff;
+      font-size: 12px;
+    }
+</style>
+<!-- <ion-header-bar class="bar bar-positive backgroundColorheader">
+  <button ng-click="goToBack()"  class="button icon 	glyphicon glyphicon-menu-left backgroundColorButton" style="display: block">
+  </button>
+  <h1 class="title colorTextHed fontStyle" style="text-align: center;">Student Task Information</h1>
+</ion-header-bar> -->
+<div class="bar bar-header bar-positive backgroundColorheader">
+    <button class="button button-icon icon ion-arrow-left-c backgroundColorButton " ng-click="goToBack()"></button>
+    <div class="h1 title colorTextHed">Student Task Information</div>
+    <!--<button class="button button-clear button-positive">Remove</button>-->
+</div>
+<ion-content class="backgroundColor has-header">
+<div class="card">
+  <div class="item item-text-wrap headingCart backgroundHeadingColor">
+    <div class="row" style="text-align: center;">
+      <div class="col colorTextHed fontStyle" ng-click="filter('name')"><span >First Name : </span></div>
+      <div class="col colorTextHed fontStyle" ng-click="filter('lastName')"><span >Last Name : </span></div>
+      <div class="col colorTextHed fontStyle" ng-click="filter('email')"><span >Email Id : </span></div>
+    </div>
+  </div>
+ <!-- <button class="button button-positive" style="background-color: #fff;">-->
+    <div class="item item-text-wrap backgroundColor" style="font-size: 12px; background-color: #fff;" ng-repeat="s in studentListInformation | orderBy:filterValue" ng-click="sideNavStudentTaskInformation(s.id,s.name)">
+      <div class="row">
+        <div class="col-33 colorText fontStyle"  style="text-align:center;">
+          {{s.name}}
+        </div>
+        <div class="col-33 colorText fontStyle"  style="text-align:center;">
+          {{s.lastName}}
+        </div>
+        <div class="col-33 colorText fontStyle" style="text-align:center;">
+          {{s.email}}
+        </div>
+      </div>
+    </div>
+  <!--</button>-->
+</div>
+<div class="row">
+    <div class="col" id="getwidth"></div>
+    <div class="col" ></div>
+</div>
+</ion-content>
+<md-sidenav md-component-id="sideStudentInformation" class="md-sidenav-right" style="min-width: 100%;">
+  <ion-header-bar class="bar bar-positive backgroundColorheader">
+    <button ng-click="cancelStudentInformation()"  class="button icon  glyphicon glyphicon-menu-left backgroundColorButton" style="display: block">
+    </button>
+    <h1 class="title colorTextHed fontStyle" style="text-align: center;"> {{name}}</h1>
+  </ion-header-bar>
+  <br>
+  <br> <br>
+  <br> 
+  <div class="row has-subheader">
+    <div class="col fontStyle"><b>Select Date</b>
+      <input  type="date" ng-style="dateStyle"  ng-model="datevalue">
+    </div>
+    <div class="col" >
+      <button class="button button-calm button-block txtDesignbutton" style="margin-top: 26px;" ng-click="getStudentTaskList()">
+        Go
+      </button>
+    </div>
+  </div>
+  <div class="card "   ng-repeat="t in taskList" style="margin-bottom: -7px;margin-top: 13px">
+    <div class="item item-text-wrap backgroundColor">
+          <div clas="row " style="font-size: 14px;">
+            <div class="col colorText fontStyle">
+              <span>Task Title:</span>
+              <span>{{t.taskTitle}}</span>
+            </div>
+            <div class="col colorText fontStyle">
+             <span>Subject:</span>
+             <span>{{t.subjectCode}}</span>
+            </div>
+            <div class="col colorText fontStyle">
+             <span>Status:</span>
+             <span>{{t.status}}</span>
+            </div>
+            <!--<div class="col colorText fontStyle">
+             <span>Start Date:</span>
+             <span>{{t.startDate | date:'medium'}}</span>
+            </div>-->
+            <div class="col colorText fontStyle">
+             <span>Duration:</span>
+             <span>{{t.duration}}</span>
+            </div>
+          </div>
+    </div>
+
+  </div>
+</md-sidenav>

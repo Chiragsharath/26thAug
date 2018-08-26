@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/www/css/style.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/LoginController.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/StudentDashController.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/adminController.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/adminMamberController.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/adminTaskController.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/router.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/services.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/lib/mainProperties.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/template/admin.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/template/adminMember.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/template/adminTasks.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/template/login.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/template/studentDash.html" charset="UTF-8" />
+  </component>
+</project>
