@@ -108,7 +108,7 @@ AppContoller
       $scope.saveData = function (role) {
         $scope.request = {
           "email": this.emailId,
-          "password": this.name,
+          "password": "N/A",
           "role": role,
           "phone": this.phone,
           "name": this.name,
@@ -117,7 +117,7 @@ AppContoller
         if (role == "student") {
           $scope.request = {
             "email": this.emailId,
-            "password": this.name,
+            "password": "N/A",
             "role": role,
             "phone": this.phone,
             "name": this.name,
